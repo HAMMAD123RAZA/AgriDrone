@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import Footer from './Footer';
 
 
-const Harvester = () => {
+const Transporter = () => {
     useEffect(() => {
         Aos.init(); 
     }, []);
@@ -65,4 +65,4 @@ const Harvester = () => {
   )
 }
 
-export default Harvester
+export default Transporter

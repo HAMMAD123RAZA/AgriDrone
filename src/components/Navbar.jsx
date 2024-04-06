@@ -24,7 +24,18 @@ const navLinks = [
   {
     title: "Harvester",
     path: "/harvester",
-  }
+  },
+
+  {
+    title: "Transporter",
+    path: "/transporter",
+  },
+  
+  // {
+  //   title: "Log out",
+  //   path: "/Log out",
+  // },
+
 ];
 
 const Navbar = () => {
@@ -67,7 +78,10 @@ const Navbar = () => {
                 <NavLink href={link.path} title={link.title} />
               </li>
             ))}
+                      <Link to="/">Logout</Link>
+
           </ul>
+
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
