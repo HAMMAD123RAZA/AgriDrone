@@ -3,6 +3,7 @@ import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from "react-ico
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Footer";
+import Team from "./Team";
 
 
 export default function About({ slides }) {
@@ -63,9 +64,17 @@ Join us on our journey to reimagine agriculture for the 21st century. Together, 
   <img src="back.png" alt="mission" />
 </div>
 
+
+
 </div>
+
 </div>
-<Footer/>
+
+<Team />
+
+
+
+<Footer />
 
 </>
 
