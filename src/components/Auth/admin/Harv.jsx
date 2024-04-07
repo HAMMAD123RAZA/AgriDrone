@@ -1,9 +1,48 @@
 import React, { useState } from 'react'
-import App from '../../../App'
-import Msg from './Msg'
+import Login from '../Login'
+import AddHarv from './AddHarv'
+import Transport from './Transport'
+import Update from './Update'
+// import Top from '../Top'
 
 const Harv = () => {
     const [state,setState]=useState(false)
+	const [reg,setReg]=useState(false)
+const [harv,setHarv]=useState(false)
+const [trans,setTrans]=useState(false)
+const [update,setUpdate]=useState(false)
+
+    const handleReg=()=>{
+        setReg(!reg)
+    }
+
+    if(reg){
+        return <Login/>
+    }
+
+    const handleHarv=()=>{
+        setHarv(!harv)
+    }
+
+    if(harv){
+        return <AddHarv/>
+    }
+
+    const handleTrans=()=>{
+        setTrans(!trans)
+    }
+    if(trans){
+        return <Transport/>
+    }
+
+	const handleUpdate=()=>{
+		setUpdate(!update)
+	}
+
+	if(update){
+		return <Update/>
+	}
+
     const hanldeApp=()=>{
         setState(!state)
     }
@@ -13,7 +52,25 @@ const Harv = () => {
     
   return (
     <>
-    
+    {/* navbar */}
+	
+    <ul class="flex bg-gray-400 md:gap-4  py-4">
+  <li class="md:mr-6 mr-2">
+    <button class="text-green-700   hover:text-green-800 " onClick={handleReg}>Register</button>
+  </li>
+  <li class="md:mr-6 mr-2">
+    <button class="text-green-700   hover:text-green-800 " onClick={handleHarv} >Add Harvest</button>
+  </li>
+  <li class="md:mr-6 mr-2">
+    <button class="text-green-700   hover:text-green-800 " onClick={handleTrans} >Add Transport</button>
+  </li>
+  <li class="md:mr-6 mr-2">
+    <button class="text-green-700   hover:text-green-800 " onClick={handleUpdate} >Update</button>
+  </li>
+
+</ul>
+{/* navbar */}
+
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
 	<div className="relative py-3 sm:max-w-xl sm:mx-auto">
 		<div

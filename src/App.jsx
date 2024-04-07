@@ -9,6 +9,8 @@ import Contact from './components/Contact';
 import Harvester from './components/Harvester';
 import Footer from './components/Footer';
 import Transporter from './components/Transporter';
+// import Login from './components/Auth/Login';
+// import Admin from './components/Auth/admin/Admin';
 
 const App = () => {
   const slides=["bg.avif","bgav.avif"];
@@ -27,7 +29,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/harvester" element={<Harvester />} />
           <Route path='/transporter' element={<Transporter/>} />
-
+          
         </Routes>
 
       </div>
